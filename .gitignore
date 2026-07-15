@@ -2,3 +2,4 @@
 !/cache/.gitkeep
 /log/*
 !/log/.gitkeep
+/.vscode/
