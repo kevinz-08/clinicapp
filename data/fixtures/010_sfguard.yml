@@ -1,0 +1,20 @@
+sfGuardGroup:
+  Group_admin:
+    name:           admin
+    description:    Grupo administrador
+    Permissions:    [Permission_admin]
+
+sfGuardPermission:
+  Permission_admin:
+    name:           admin
+    description:    Permiso de administracion
+
+sfGuardUser:
+  User_admin:
+    first_name:     Kevin
+    last_name:      Garcia
+    email_address:  kevingadev@gmail.com
+    username:       admin
+    password:       admin
+    is_super_admin: true
+    Groups:         [Group_admin]
