@@ -1,0 +1,26 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: cita, action: index }
+
+paciente_admision:
+  url:   /paciente/admision
+  param: { module: paciente, action: admision }
+
+pais_show:
+  url:   /pais/:codigo
+  param: { module: pais, action: show }
+  requirements:
+    codigo: '[A-Za-z]{3}'
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

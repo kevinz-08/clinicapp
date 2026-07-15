@@ -1,0 +1,73 @@
+Paciente:
+  actAs: [Timestampable]
+  columns:
+    documento:
+      type: string(20)
+      notnull: true
+      unique: true
+    nombre:
+      type: string(100)
+      notnull: true
+    apellido:
+      type: string(100)
+      notnull: true
+    fecha_nacimiento:
+      type: date
+    email:
+      type: string(255)
+    telefono:
+      type: string(20)
+    pais_codigo:
+      type: string(3)
+
+Medico:
+  actAs: [Timestampable]
+  columns:
+    registro_medico:
+      type: string(30)
+      notnull: true
+      unique: true
+    nombre:
+      type: string(100)
+      notnull: true
+    apellido:
+      type: string(100)
+      notnull: true
+    especialidad:
+      type: string(50)
+      notnull: true
+    email:
+      type: string(255)
+
+Cita:
+  actAs: [Timestampable]
+  columns:
+    paciente_id:
+      type: integer
+      notnull: true
+    medico_id:
+      type: integer
+      notnull: true
+    fecha:
+      type: date
+      notnull: true
+    hora:
+      type: time
+      notnull: true
+    motivo:
+      type: string(500)
+    estado:
+      type: string(20)
+      notnull: true
+      default: pendiente
+  relations:
+    Paciente:
+      local: paciente_id
+      foreign: id
+      foreignAlias: Citas
+      onDelete: CASCADE
+    Medico:
+      local: medico_id
+      foreign: id
+      foreignAlias: Citas
+      onDelete: CASCADE
