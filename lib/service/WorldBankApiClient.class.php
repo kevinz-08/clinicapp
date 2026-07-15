@@ -1,11 +1,9 @@
 <?php
 
 /**
- * Cliente minimo para la API publica del Banco Mundial (paises).
- * Documentacion: https://datahelpdesk.worldbank.org/knowledgebase/articles/898590
+ * api publica del Banco Mundial
  *
- * Las respuestas se cachean en disco (1 hora) para no consultar
- * la API externa en cada request.
+ * Las respuestas se cachean en disco para no consultar
  *
  * @package    clinicapp
  * @subpackage service
@@ -25,7 +23,7 @@ class WorldBankApiClient
   }
 
   /**
-   * Listado de paises (excluye los agregados regionales que devuelve la API).
+   * listado de paises
    *
    * @return array
    */
@@ -50,7 +48,7 @@ class WorldBankApiClient
   }
 
   /**
-   * Detalle de un pais por su codigo ISO alfa-3 (ej: COL).
+   * detalle de un pais por su codigo ISO alfa-3
    *
    * @param  string $codigo
    * @return array|null
@@ -85,7 +83,6 @@ class WorldBankApiClient
       CURLOPT_CONNECTTIMEOUT => 5,
       CURLOPT_TIMEOUT        => 20,
       CURLOPT_USERAGENT      => 'clinicapp/1.0',
-      // XAMPP no trae un bundle de CAs valido para cURL, usamos el del proyecto
       CURLOPT_CAINFO         => sfConfig::get('sf_data_dir').'/cacert.pem',
     ));
 
