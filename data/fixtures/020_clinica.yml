@@ -1,0 +1,119 @@
+Medico:
+  Medico_rodriguez:
+    registro_medico: RM-10234
+    nombre: Carlos
+    apellido: Rodriguez
+    especialidad: Medicina General
+    email: c.rodriguez@clinicapp.local
+  Medico_martinez:
+    registro_medico: RM-20871
+    nombre: Laura
+    apellido: Martinez
+    especialidad: Pediatria
+    email: l.martinez@clinicapp.local
+  Medico_gomez:
+    registro_medico: RM-30455
+    nombre: Andres
+    apellido: Gomez
+    especialidad: Cardiologia
+    email: a.gomez@clinicapp.local
+
+Paciente:
+  Paciente_perez:
+    documento: '1012345678'
+    nombre: Maria
+    apellido: Perez
+    fecha_nacimiento: '1990-04-12'
+    email: maria.perez@example.com
+    telefono: '3001234567'
+    pais_codigo: COL
+  Paciente_lopez:
+    documento: '1023456789'
+    nombre: Juan
+    apellido: Lopez
+    fecha_nacimiento: '1985-09-30'
+    email: juan.lopez@example.com
+    telefono: '3109876543'
+    pais_codigo: COL
+  Paciente_torres:
+    documento: '1034567890'
+    nombre: Ana
+    apellido: Torres
+    fecha_nacimiento: '2015-01-22'
+    email: ana.torres@example.com
+    telefono: '3205551234'
+    pais_codigo: MEX
+  Paciente_castro:
+    documento: '1045678901'
+    nombre: Pedro
+    apellido: Castro
+    fecha_nacimiento: '1978-11-05'
+    email: pedro.castro@example.com
+    telefono: '3014448899'
+    pais_codigo: VEN
+  Paciente_rios:
+    documento: '1056789012'
+    nombre: Sofia
+    apellido: Rios
+    fecha_nacimiento: '2001-06-17'
+    email: sofia.rios@example.com
+    telefono: '3157772211'
+    pais_codigo: ECU
+
+Cita:
+  Cita_1:
+    Paciente: Paciente_perez
+    Medico: Medico_rodriguez
+    fecha: '2026-07-16'
+    hora: '08:00:00'
+    motivo: Control general anual
+    estado: pendiente
+  Cita_2:
+    Paciente: Paciente_lopez
+    Medico: Medico_gomez
+    fecha: '2026-07-16'
+    hora: '09:30:00'
+    motivo: Dolor en el pecho al hacer ejercicio
+    estado: pendiente
+  Cita_3:
+    Paciente: Paciente_torres
+    Medico: Medico_martinez
+    fecha: '2026-07-14'
+    hora: '10:00:00'
+    motivo: Control de crecimiento
+    estado: atendida
+  Cita_4:
+    Paciente: Paciente_castro
+    Medico: Medico_rodriguez
+    fecha: '2026-07-13'
+    hora: '11:15:00'
+    motivo: Gripe y malestar general
+    estado: atendida
+  Cita_5:
+    Paciente: Paciente_rios
+    Medico: Medico_gomez
+    fecha: '2026-07-17'
+    hora: '14:00:00'
+    motivo: Chequeo cardiologico preventivo
+    estado: pendiente
+  Cita_6:
+    Paciente: Paciente_perez
+    Medico: Medico_martinez
+    fecha: '2026-07-10'
+    hora: '15:30:00'
+    motivo: Consulta por alergia
+    estado: cancelada
+  Cita_7:
+    Paciente: Paciente_lopez
+    Medico: Medico_rodriguez
+    fecha: '2026-07-20'
+    hora: '08:45:00'
+    motivo: Resultados de examenes de laboratorio
+    estado: pendiente
+  Cita_8:
+    Paciente: Paciente_castro
+    Medico: Medico_gomez
+    fecha: '2026-07-21'
+    hora: '16:00:00'
+    motivo: Seguimiento de hipertension
+    estado: pendiente
